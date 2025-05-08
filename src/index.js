@@ -23,7 +23,7 @@ function generate(event) {
 
   let containerCodeELement = document.querySelector("#container-code");
   containerCodeELement.classList.remove("hidden");
-  containerCodeELement.innerHTML = `<span class = "generate">⏳ Generating.... </span>`;
+  containerCodeELement.innerHTML = `<span class = "generate">⏳ Generating.... </span>`
 }
 
 let aiGeneratorFormElement = document.querySelector("#ai-generator-form");

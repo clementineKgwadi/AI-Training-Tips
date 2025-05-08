@@ -1,3 +1,8 @@
+:root {
+  --primary-color: #f07810;
+  --secondary-color: #fff;
+}
+
 body {
   font-family: "Roboto", Courier, monospace;
   background-color: #f9f7fe;
@@ -8,34 +13,31 @@ body {
   max-width: 800px;
 }
 
+header h1, h2{
+font-weight: 300;
+text-align: center;
+}
+
 header h1 {
   color: #000;
   line-height: 1.5;
-  text-align: center;
-  font-weight: 300;
 }
 
 header h2 {
   font-size: 18px;
-  text-align: center;
   color: #475053;
-  font-weight: 300;
   opacity: 0.6;
 }
 
 .form-wrapper {
   margin-top: 30px;
-  background-color: #fff;
+  background-color: var(--secondary-color);
   padding: 18px 23px;
   border-radius: 10px;
 }
 
 main form {
   display: flex;
-}
-
-strong {
-  color: #f07810;
 }
 
 .input-prompt {
@@ -57,8 +59,8 @@ strong {
   border-radius: 8px;
   border: none;
   font-size: 15px;
-  background-color: #f07810;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
   transition: all 150ms ease-in-out;
   cursor: pointer;
 }
@@ -67,18 +69,23 @@ strong {
   transform: scale(1.05);
 }
 
+
 .container-code {
-  background-color: #fff;
+  background-color: var(--secondary-color);
   color: #00204a;
   padding: 18px;
   /* border-radius: 10px; */
   line-height: 1.5;
   margin-top: 30px;
-  font-size: 13px;
-  border-left: 3px solid #f07810;
+  font-size: 14px;
+  border-left: 3px solid var(--primary-color);
 }
 
-.hidden{
+strong {
+  color:var(--primary-color);
+}
+
+.hidden {
   display: none;
 }
 
@@ -87,6 +94,10 @@ strong {
   font-size: 13px;
   margin-top: 10px;
   opacity: 0.8;
+}
+
+.input-prompt::placeholder{
+  font-size: 13px;
 }
 
 footer {
@@ -108,5 +119,21 @@ footer {
 @-webkit-keyframes blink-animation {
   to {
     visibility: hidden;
+  }
+}
+
+@media(max-width: 576px)
+{
+  header h1{
+    font-size:28px ;
+  }
+
+  header h2{
+    font-size: 16px;
+  }
+
+  footer{
+   font-size: 12px;
+   line-height: 1.5; 
   }
 }
