@@ -26,20 +26,24 @@
       </header>
 
       <main>
-        <form action="" id="ai-generator-form">
-          <input
-            type="text"
-            name="text"
-            placeholder="Ready to crush your goals? Tell us what you want to work on?"
-            autocomplete="off"
-            required
-            class="input-prompt"
-            id="input-prompt"
-          />
-          <input type="submit" value="Generate" class="button-submit" />
-        </form>
+        <div class="form-wrapper">
+          <form action="" id="ai-generator-form">
+            <input
+              type="text"
+              name="text"
+              placeholder="Ready to crush your goals? Tell us what you want to work on?"
+              autocomplete="off"
+              required
+              class="input-prompt"
+              id="input-prompt"
+            />
+            <input type="submit" value="Generate" class="button-submit" />
+          </form>
 
-        <div class="container-code" id="container-code"></div>
+          <div class="hint">e.g., abs, legs, or overall fitness</div>
+        </div>
+
+        <div class="container-code hidden" id="container-code" ></div>
       </main>
 
       <footer>

@@ -20,6 +20,10 @@ function generate(event) {
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
   axios.get(apiUrl).then(displayWorkout);
+
+  let containerCodeELement = document.querySelector("#container-code");
+  containerCodeELement.classList.remove("hidden");
+  containerCodeELement.innerHTML = `<span class = "generate">⏳ Generating.... </span>`;
 }
 
 let aiGeneratorFormElement = document.querySelector("#ai-generator-form");

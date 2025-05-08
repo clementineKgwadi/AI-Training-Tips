@@ -23,12 +23,15 @@ header h2 {
   opacity: 0.6;
 }
 
-main form {
-  background-color: #fff;
-  padding: 23px;
-  border-radius: 10px;
-  display: flex;
+.form-wrapper {
   margin-top: 30px;
+  background-color: #fff;
+  padding: 18px 23px;
+  border-radius: 10px;
+}
+
+main form {
+  display: flex;
 }
 
 strong {
@@ -71,13 +74,39 @@ strong {
   /* border-radius: 10px; */
   line-height: 1.5;
   margin-top: 30px;
-  font-size: 14px;
+  font-size: 13px;
   border-left: 3px solid #f07810;
 }
 
+.hidden{
+  display: none;
+}
+
+.hint {
+  color: #475053;
+  font-size: 13px;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
 footer {
-  margin-top: 30px;
+  margin-top: 25px;
   font-size: 14px;
   text-align: center;
   opacity: 0.7;
+}
+
+.generate {
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }
